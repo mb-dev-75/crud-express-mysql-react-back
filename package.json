@@ -1,0 +1,26 @@
+{
+  "name": "react-mysql-back",
+  "version": "1.0.0",
+  "description": "Basic CRUD with Express MySQL React (part.2 - back)",
+  "homepage": "https://github.com/mb-dev-75/crud-express-mysql-react-back",
+  "keywords": [
+    "CRUD",
+    "mySQL",
+    "Express",
+    "React",
+    "axios"
+  ],
+  "author": "MB",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.7"
+  }
+}
