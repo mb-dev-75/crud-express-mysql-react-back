@@ -12,20 +12,14 @@ app.use('/', cors());
 const db = mysql.createConnection({
   user: 'root',
   host: 'localhost',
-  password: 'toor',
-  database: 'mbdb',
+  password: '',
+  database: 'mbdb', // See members.sql in front part
   port: '3306',
 });
 
 // Create
 app.post('/create', (req, res) => {
-  const name = req.body.name;
-  const email = req.body.email;
-  const work = req.body.work;
-  const phone = req.body.phone;
-  const gender = req.body.gender;
-  const children = req.body.children;
-  const comment = req.body.comment;
+  const { name, email, work, phone, gender, children, comment } = req.body
 
   db.query(
     'INSERT INTO members(name, email, work, phone, gender, children, comment) VALUES(?,?,?,?,?,?,?)',
